@@ -1,0 +1,29 @@
+<div class="item-container _margin10-l">
+    <div class="item-header">
+
+        <div class="img-container" [style.backgroundImage]="'url('+ dataToView.itemImage +')'"></div>
+
+        <article class="text-container">
+
+          <span class="subtitle">{{ dataToView.itemName }}</span>
+
+          <p [ngClass]="{'text--short' : !isOpen}" class="text">{{ dataToView.itemDesc }}</p>
+
+          <span (click)="showInfoItemCard()" class="more-info">{{ 'toggleItemCard.information'|translate }}</span>
+          <i (click)="showInfoItemCard()" class="material-icons _margin10-l" *ngIf="!isOpen">keyboard_arrow_down</i>
+          <i (click)="showInfoItemCard()" class="material-icons _margin10-l" *ngIf="isOpen">keyboard_arrow_up</i>
+
+        </article>
+    </div>
+
+    <div class="info-container text fadeIn" *ngIf="isOpen">
+
+        <span>{{ 'toggleItemCard.include'|translate }}</span>
+
+        <ul>
+            <li *ngFor="let option of dataToView.itemInfo">{{ option.optionName }}</li>
+        </ul>
+
+        <span class="warning">{{ 'toggleItemCard.warning'|translate }}</span>
+    </div>
+</div>

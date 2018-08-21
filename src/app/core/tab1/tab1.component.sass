@@ -1,0 +1,34 @@
+@import './../../../styles/base/boilerplate_modules/variables'
+@import './../../../styles/base/boilerplate_modules/typography'
+@import './../../../styles/utilities/boilerplate_modules/mixins'
+
+header
+  text-align: center
+
+.body-title
+  padding-top: 50px
+  margin-bottom: 30px
+  @include fontType($font-roboto--titles, $color-blue--dark, 24px, 'bold')
+  b
+    margin-right: 20px
+
+.material-icons
+  color: $color-yellow
+  font-size: 15px
+
+.card-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+.card
+  margin: 20px 15px 20px 0
+
+
+@media only screen and (min-width: $mobile) and (max-width: $tablet)
+  .card
+    margin: 0
+    width: 100%
+
+  .wrapper > .card-container
+    margin: 0 40px

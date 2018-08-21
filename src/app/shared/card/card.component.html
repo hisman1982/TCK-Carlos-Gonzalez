@@ -1,0 +1,30 @@
+<div class="card-container" [ngClass]="{ 'card--selected' : dataToView.selected }">
+
+    <div class="card-header">
+        <span> {{ dataToView.serviceName }} </span>
+    </div>
+
+    <hr>
+
+    <div class="card-body">
+
+        <div class="card-content">
+            <ul>
+                <li *ngFor="let option of dataToView.serviceOptions">{{ option.optionName }}</li>
+            </ul>
+        </div>
+
+        <div class="card-footer" [ngClass]="{ 'disabled' : !dataToView.selected, 'card--selected' : dataToView.selected }">
+
+            <label class="container">{{ 'card.selectReg'|translate }}
+                <input type="radio"
+                       name="radioCardType"
+                       #radio
+                       [value]="dataToView.serviceId"
+                       (change)="emitSelectCard(radio.value)">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+    </div>
+</div>

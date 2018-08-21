@@ -1,0 +1,23 @@
+<header>
+
+  <div class="body-title">
+      {{ 'tab1.hotel'|translate }} <b>{{ hotelInfo.hotelName }}</b>
+      <ng-container *ngFor="let number of numberStars">
+        <i class="material-icons">star</i>
+      </ng-container>
+  </div>
+
+</header>
+
+<div class="wrapper">
+
+  <div class="card-container" *ngIf="cardDataList">
+
+    <app-card class="card"
+              *ngFor="let data of cardDataList"
+              [dataToLoad]="data"
+              (emitSelected)="setSelectedCard($event)">
+    </app-card>
+
+  </div>
+</div>

@@ -1,0 +1,20 @@
+@mixin fontType($family, $color, $size, $weight)
+  color: $color
+  font-family: $family, serif
+  font-size: $size
+  font-weight: $weight
+
+@mixin flex_center
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin flex_start
+  display: flex
+  justify-content: flex-start
+  align-items: baseline
+
+@mixin title
+  text-align: center
+  color: $color-blue--dark
+  font-weight: bold

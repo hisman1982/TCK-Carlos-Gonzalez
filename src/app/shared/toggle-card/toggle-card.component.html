@@ -1,0 +1,15 @@
+<div class="accordion-container">
+
+    <div class="accordion-header">
+        <div class="exclusive">{{ 'toggleCard.web'|translate }}</div>
+        <i (click)="showToggleTab()" class="material-icons" *ngIf="!dataToView.cardIsOpen">keyboard_arrow_down</i>
+        <i (click)="showToggleTab()" class="material-icons" *ngIf="dataToView.cardIsOpen">keyboard_arrow_up</i>
+        <span (click)="showToggleTab()" class="title-1 _margin10-l">{{ dataToView.cardName }}</span>
+        <span class="optional _margin10-l">{{ 'toggleCard.optional'|translate }}</span>
+    </div>
+
+    <div class="accordion-body fadeIn" *ngIf="dataToView.cardIsOpen">
+
+        <app-toggle-item-card *ngFor="let item of dataToView.cardItem" [dataToLoad]="item"></app-toggle-item-card>
+    </div>
+</div>

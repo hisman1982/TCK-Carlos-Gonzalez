@@ -1,0 +1,50 @@
+@import './../../../styles/base/boilerplate_modules/variables'
+@import './../../../styles/base/boilerplate_modules/typography'
+@import './../../../styles/utilities/boilerplate_modules/mixins'
+
+nav
+  width: 100%
+  height: 46px
+  background: #fff
+  border-bottom: 1px solid #ccc
+  box-shadow: 0px -1px 8px 0px rgba(0,0,0,0.75)
+
+.nav-tabs
+  width: 300px
+  border: 0
+  float: right
+  font-size: 1rem
+  display: flex
+  margin-bottom: 0
+  list-style: none
+  > li
+    &.nav-item
+      flex: 1
+      margin-right: 2rem
+      cursor: pointer
+      color: $color-blue--light
+      outline: none
+      width: 100px
+      text-align: center
+      padding-bottom: 10px
+      @include fontType($font-roboto--titles, $color-blue--light, 16px, 400)
+      &.active
+        border-bottom: 3px solid $color-blue--dark
+        color: $color-blue--dark
+      &:not(.active):hover
+        border-top-color: $color-yellow
+        h2, h3
+          font-size: inherit
+
+@media only screen and (min-width: $mobile) and (max-width: $tablet)
+
+  .container
+    flex-wrap: wrap
+    > li
+      flex-basis: 50%
+
+@media all and (max-width: $mobile)
+
+  .container
+    > li
+      flex-basis: 100%

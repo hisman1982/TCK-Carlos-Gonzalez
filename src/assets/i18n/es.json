@@ -1,0 +1,21 @@
+{
+  "menu": {
+    "item1": "Tab1",
+    "item2": "Tab2"
+  },
+  "tab1": {
+    "hotel": "HOTEL"
+  },
+  "card": {
+    "selectReg": "Elegir régimen"
+  },
+  "toggleCard": {
+    "web": "EXCLUSIVO HOTELES.COM",
+    "optional": "Opcional"
+  },
+  "toggleItemCard": {
+    "information": "Más información y condiciones",
+    "include": "Incluye",
+    "warning": "Valores no acumulables a otras promociones similares"
+  }
+}

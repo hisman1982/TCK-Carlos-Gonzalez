@@ -1,0 +1,99 @@
+@import './../../../styles/base/boilerplate_modules/variables'
+@import './../../../styles/base/boilerplate_modules/typography'
+@import './../../../styles/utilities/boilerplate_modules/mixins'
+
+
+.item-container
+  border: 1px solid $color-grid--border
+  margin-bottom: 10px
+
+.item-header
+  display: flex
+
+.info-container
+  font-size: .9rem
+
+.img-container
+  min-width: 200px
+  background-size: cover
+  height: 144px
+
+.text-container
+  padding: 10px 0 0 20px
+  width: 70%
+  line-height: 1.5rem
+
+.info-container
+  padding: 20px 20px 10px 0
+  span
+    padding-left: 25px
+
+ul
+  width: 86%
+  height: 130px
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  @media only screen and (max-width: 1200px)
+    width: 100%
+    height: auto
+
+li
+  width: 300px
+  line-height: 1.6
+
+i.material-icons
+  top: 7px
+  position: relative
+  color: $color-blue--light
+  cursor: pointer
+
+.subtitle
+  @include fontType($font-roboto--titles, $color-blue--dark, 18px, 700)
+
+.more-info
+  @include fontType($font-roboto--basic, $color-blue--light, 14px, 700)
+  cursor: pointer
+
+.text
+  @include fontType($font-roboto--basic, $color-black, 14px, 400)
+
+.warning
+  @include fontType($font-roboto--basic, $color-blue--dark, 14px, 700)
+
+.text--short
+  max-height: 3rem
+  overflow: hidden
+
+.text--short:after
+  content: '...'
+  position: inherit
+  top: calc(3rem - 1.5rem)
+  right: 0
+
+
+@media only screen and (max-width: $tablet)
+  .item-header
+    flex-wrap: wrap
+
+  .img-container
+    background-size: cover
+    background-position-y: inherit
+    min-width: 100%
+
+  .text-container
+    width: 100%
+
+  .info-container
+    padding: 10px
+    span
+      padding: 0
+
+  li
+    width: 100%
+
+
+@media only screen and (min-width: $mobile) and (max-width: $tablet)
+  ul
+    padding-left: 0
+    list-style: none

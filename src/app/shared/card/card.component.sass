@@ -1,0 +1,103 @@
+@import './../../../styles/base/boilerplate_modules/variables'
+@import './../../../styles/base/boilerplate_modules/typography'
+@import './../../../styles/utilities/boilerplate_modules/mixins'
+
+.card-container
+  width: 220px
+  border: 1px solid $color-grid--border
+  height: 460px
+  background-color: $color-white
+  justify-content: center
+
+.card-header
+  @include flex_center
+  @include title
+  @include fontType($font-roboto--titles, $color-text--important, 16px, 'bold')
+  height: 50px
+  text-align: center
+
+.card-body
+  @include fontType($font-roboto--basic, $color-blue--dark, 15px, 400)
+  height: 410px
+
+.card-content
+  height: 325px
+  ul
+    padding-left: 30px
+    line-height: 1.4
+
+.card-footer
+  @include flex_center
+  @include fontType($font-roboto--basic, $color-blue--dark, 16px, 400)
+  height: 50px
+  width: 70%
+  margin: 0 auto
+  background-color: #eee
+  &:hover
+    background-color: #ccc
+
+.disabled
+  color: $color-text--disabled !important
+
+.card--selected
+  border: 1px solid $color-blue--dark
+
+hr
+  text-align: center
+  width: 30%
+  border-top: 1px solid $color-blue--light
+  margin-top: 0
+
+// Radio button-container
+.container
+  display: block
+  position: relative
+  padding-left: 25px
+  margin-bottom: 0
+  cursor: pointer
+  font-size: 14px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  .checkmark:after
+    top: 4px
+    left: 4px
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    background-color: #fff
+  input
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    &:checked ~ .checkmark
+      background-color: $color-green
+      &:after
+        display: block
+/* Create a custom radio button */
+.checkmark
+  position: absolute
+  top: 0
+  left: 0
+  height: 16px
+  width: 16px
+  background-color: #fff
+  border-radius: 50%
+  &:after
+    content: ""
+    position: absolute
+    display: none
+
+@media only screen and (min-width: $mobile) and (max-width: $tablet)
+  .card-container
+    width: 100%
+    height: auto
+    justify-content: center
+    margin-bottom: 15px
+
+  .card-body
+    height: auto
+
+  .card-content
+    height: auto

@@ -1,0 +1,63 @@
+@import './../../../styles/base/boilerplate_modules/variables'
+@import './../../../styles/base/boilerplate_modules/typography'
+@import './../../../styles/utilities/boilerplate_modules/mixins'
+
+.accordion-container,
+.accordion-header
+  background-color: $color-white
+
+.accordion-container
+  border: 1px solid $color-grid--border
+  padding: 10px
+  margin: 0 31px 31px
+
+.accordion-header
+  @include flex_start
+  height: 60px
+  padding: 15px
+  position: relative
+
+.exclusive
+  position: absolute
+  top: -10px
+  right: -10px
+  background-color: $color-red
+  padding: 5px
+  width: 170px
+  height: 14px
+  text-align: center
+  padding-top: 8px
+  @include fontType($font-roboto--basic, $color-white, 12px, 400)
+
+.title-1
+  cursor: pointer
+  @include fontType($font-roboto--titles, $color-blue--light, 24px, 700)
+
+.optional
+  @include fontType($font-roboto--basic, $color-blue--dark, 12px, 700)
+
+i.material-icons
+  top: 7px
+  position: relative
+  color: $color-blue--light
+  cursor: pointer
+  font-size: 30px
+
+@media only screen and (max-width: 590px)
+  .exclusive
+    position: absolute
+    width: 100%
+    top: -10px
+    right: 0
+    left: -10px
+    margin-bottom: 20px
+
+
+@media only screen and (min-width: $mobile) and (max-width: $tablet)
+  .accordion-header
+    padding-top: 30px
+    height: 70px
+    flex-wrap: wrap
+
+  .title-1
+    @include fontType($font-roboto--titles, $color-blue--light, 18px, 700)
