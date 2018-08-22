@@ -26,6 +26,6 @@ export class ToggleCardComponent implements OnInit {
 
   showToggleTab = () => {
 
-    this.dataToView.cardIsOpen = (this.dataToView.cardIsOpen) ? false : true;
+    this.dataToView.cardIsOpen = !this.dataToView.cardIsOpen;
   }
 }

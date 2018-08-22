@@ -48,46 +48,6 @@ hr
   border-top: 1px solid $color-blue--light
   margin-top: 0
 
-// Radio button-container
-.container
-  display: block
-  position: relative
-  padding-left: 25px
-  margin-bottom: 0
-  cursor: pointer
-  font-size: 14px
-  -webkit-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
-  user-select: none
-  .checkmark:after
-    top: 4px
-    left: 4px
-    width: 8px
-    height: 8px
-    border-radius: 50%
-    background-color: #fff
-  input
-    position: absolute
-    opacity: 0
-    cursor: pointer
-    &:checked ~ .checkmark
-      background-color: $color-green
-      &:after
-        display: block
-/* Create a custom radio button */
-.checkmark
-  position: absolute
-  top: 0
-  left: 0
-  height: 16px
-  width: 16px
-  background-color: #fff
-  border-radius: 50%
-  &:after
-    content: ""
-    position: absolute
-    display: none
 
 @media only screen and (min-width: $mobile) and (max-width: $tablet)
   .card-container
