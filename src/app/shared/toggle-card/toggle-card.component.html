@@ -8,7 +8,7 @@
         <span class="optional _margin10-l">{{ 'toggleCard.optional'|translate }}</span>
     </div>
 
-    <div class="accordion-body fadeIn" *ngIf="dataToView.cardIsOpen">
+    <div class="accordion-body fadeIn" *ngIf="dataToView.cardIsOpen" [@dropDown]>
 
         <app-toggle-item-card *ngFor="let item of dataToView.cardItem" [dataToLoad]="item"></app-toggle-item-card>
     </div>
